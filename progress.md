@@ -7,7 +7,7 @@
 | # | Topic | Status | Notes |
 |---|-------|--------|-------|
 | 1 | Foundation of LLMs and Reasoning | [x] | [notes](notes/f24-lecture-01.md) |
-| 2 | Planning and Tool Utilization | [ ] | |
+| 2 | Planning and Tool Utilization | [x] | [notes](notes/f24-lecture-02.md) |
 | 3 | LLM Agent Infrastructure | [ ] | |
 | 4 | Retrieval-Augmented Generation | [ ] | |
 | 5 | Code Generation and Data Science | [ ] | |
