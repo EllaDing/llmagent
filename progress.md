@@ -66,5 +66,15 @@
 
 ---
 
+## Side Learning / Foundations
+
+Supplementary background notes that support the courses but aren't tied to any specific lecture.
+
+| Topic | Notes |
+|-------|-------|
+| RL Dynamic Programming (Sutton & Barto Ch. 4) + Powell's Fleet ADP | [notes](notes/rl_dynamic_programming.md) |
+
+---
+
 ## Resources
 <!-- Papers, repos, tools discovered during learning -->

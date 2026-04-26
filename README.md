@@ -16,8 +16,9 @@ Personal notes and progress tracker for studying LLM agents through three Berkel
 progress.md          # Lecture tracker with completion status and links to notes
 draft.md             # Scratch pad for taking notes while watching
 notes/
-  f24-lecture-01.md  # Notes per lecture
+  f24-lecture-01.md  # Per-lecture course notes
   f24-lecture-02.md
+  rl_dynamic_programming.md  # Side-learning / foundational notes
   ...
 ```
 
