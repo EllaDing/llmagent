@@ -1,6 +1,6 @@
 # Chapter 4: Dynamic Programming
 
-DP assumes you have a **complete model**: the transition dynamics $p(s', r \mid s, a)$. The goal is to find the optimal value function $v_*$ or policy $\pi_*$.
+DP assumes you have a **complete model**: the transition dynamics $p(s', r \mid s, a)$. The goal is to find the optimal value function $v_\*$ or policy $\pi_\*$.
 
 ---
 
