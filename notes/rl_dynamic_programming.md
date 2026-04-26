@@ -34,7 +34,7 @@ $$\pi'(s) = \arg\max_a \sum_{s',r} p(s',r|s,a)\bigl[r + \gamma v_\pi(s')\bigr]$$
 
 Then $v_{\pi'}(s) \geq v_\pi(s)$ for all $s$ — the greedy policy is at least as good.
 
-If $v_{\pi'} = v_\pi$, you have found the **optimal** policy $\pi_*$.
+If $v_{\pi'} = v_\pi$, you have found the **optimal** policy $\pi_\*$.
 
 **Intuition:** $v_\pi(s)$ captures the long-term value of *following $\pi$* from state $s$. Being greedy w.r.t. $v_\pi$ means: take the best first action, then follow $\pi$ afterward — which is provably at least as good as just following $\pi$ from the start.
 
@@ -66,7 +66,7 @@ $$\leq \mathbb{E}\bigl[R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots \mid
 
 Alternate between evaluation and improvement until convergence:
 
-$$\pi_0 \xrightarrow{\text{eval}} v_{\pi_0} \xrightarrow{\text{improve}} \pi_1 \xrightarrow{\text{eval}} v_{\pi_1} \xrightarrow{\text{improve}} \pi_2 \;\to\; \cdots \;\to\; \pi_*$$
+$$\pi_0 \xrightarrow{\text{eval}} v_{\pi_0} \xrightarrow{\text{improve}} \pi_1 \xrightarrow{\text{eval}} v_{\pi_1} \xrightarrow{\text{improve}} \pi_2 \;\to\; \cdots \;\to\; \pi_\*$$
 
 Since there are finitely many deterministic policies in a finite MDP, this **must converge** in a finite number of steps.
 
@@ -114,7 +114,7 @@ The loop stops when $\pi_{k+1} = \pi_k$ — policy improvement produces no chang
 
 $$\pi_k(s) = \arg\max_a q_{\pi_k}(s, a) \quad \text{for all } s$$
 
-This is exactly the Bellman optimality equation, so $\pi_k = \pi_*$.
+This is exactly the Bellman optimality equation, so $\pi_k = \pi_\*$.
 
 ### Concrete Mini-Example
 
@@ -136,11 +136,11 @@ This collapses policy evaluation + improvement into a single update using the **
 
 $$V_{k+1}(s) \leftarrow \max_a \sum_{s',r} p(s',r|s,a)\bigl[r + \gamma V_k(s')\bigr]$$
 
-This converges to $v_*$. Once converged, extract the greedy policy:
+This converges to $v_\*$. Once converged, extract the greedy policy:
 
-$$\pi_*(s) = \arg\max_a \sum_{s',r} p(s',r|s,a)\bigl[r + \gamma v_*(s')\bigr]$$
+$$\pi_\*(s) = \arg\max_a \sum_{s',r} p(s',r|s,a)\bigl[r + \gamma v_\*(s')\bigr]$$
 
-**Why this is a shortcut:** Value iteration never explicitly maintains a policy during the process. Instead of the expensive nested-loop structure of policy iteration (full evaluation → improvement → full evaluation → ...), you just bake the $\max$ directly into the value update. When $V$ converges to $v_*$, extract $\pi_*$ once at the end.
+**Why this is a shortcut:** Value iteration never explicitly maintains a policy during the process. Instead of the expensive nested-loop structure of policy iteration (full evaluation → improvement → full evaluation → ...), you just bake the $\max$ directly into the value update. When $V$ converges to $v_\*$, extract $\pi_\*$ once at the end.
 
 **Comparison with policy iteration:**
 
@@ -168,7 +168,7 @@ Three core operations that recur throughout RL:
 |---|---|
 | **Policy evaluation** | Compute $v_\pi$ given $\pi$ |
 | **Policy improvement** | Compute greedy $\pi'$ given $v_\pi$ |
-| **Policy iteration** | Alternate the two until reaching $\pi_*$ |
+| **Policy iteration** | Alternate the two until reaching $\pi_\*$ |
 
 **Value iteration** is the efficient special case that merges evaluation and improvement into one step.
 
@@ -193,7 +193,7 @@ All DP methods share two key properties:
 ## What to Watch For When Reading
 
 - The **gridworld example** (pp. 76–77) is canonical — trace through it manually to build intuition.
-- Bellman equations come in two flavors: **expectation form** (evaluating a fixed $\pi$) and **optimality/max form** (finding $\pi_*$).
+- Bellman equations come in two flavors: **expectation form** (evaluating a fixed $\pi$) and **optimality/max form** (finding $\pi_\*$).
 - Section 4.5 (Asynchronous DP, between 4.4 and 4.6) is short but bridges theory and practice.
 
 ---
@@ -206,7 +206,7 @@ All DP methods share two key properties:
 
 $$v_\pi(s) = \max_a \sum_{s',r} p(s',r|s,a)\bigl[r + \gamma v_\pi(s')\bigr]$$
 
-This is the Bellman optimality equation. Its unique solution is $v_*$, so $v_\pi = v_*$ and $\pi = \pi_*$.
+This is the Bellman optimality equation. Its unique solution is $v_\*$, so $v_\pi = v_\*$ and $\pi = \pi_\*$.
 
 ### Q2: If $\pi$ is greedy w.r.t. the **equiprobable random policy's** value function $v_{\pi_{\text{rand}}}$, is it optimal?
 
@@ -214,21 +214,21 @@ This is the Bellman optimality equation. Its unique solution is $v_*$, so $v_\pi
 
 $$v_\pi \;\geq\; v_{\pi_{\text{rand}}}$$
 
-That is improvement, not optimality. Generally you'd need many rounds of policy iteration (or value iteration) to reach $\pi_*$.
+That is improvement, not optimality. Generally you'd need many rounds of policy iteration (or value iteration) to reach $\pi_\*$.
 
 ### Side-by-Side
 
 | Setup | Conclusion |
 |---|---|
 | Greedy w.r.t. $v_\pi$ (some other policy's value function) | $v_{\pi'} \geq v_\pi$ — *improvement* |
-| Greedy w.r.t. $v_*$ | Optimal |
-| Greedy w.r.t. its **own** $v_\pi$ | Optimal (fixed-point condition implies $v_\pi = v_*$) |
+| Greedy w.r.t. $v_\*$ | Optimal |
+| Greedy w.r.t. its **own** $v_\pi$ | Optimal (fixed-point condition implies $v_\pi = v_\*$) |
 
 ### The General Rule
 
 > Greedy w.r.t. **somebody else's** value function $\Rightarrow$ improvement over that policy.
 > Greedy w.r.t. **its own** value function $\Rightarrow$ optimality (fixed-point condition).
-> Greedy w.r.t. $v_*$ $\Rightarrow$ optimality (by definition).
+> Greedy w.r.t. $v_\*$ $\Rightarrow$ optimality (by definition).
 
 ### Why the Distinction Matters
 
