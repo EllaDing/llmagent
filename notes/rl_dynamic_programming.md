@@ -1,4 +1,10 @@
-# Chapter 4: Dynamic Programming
+# Reinforcement Learning — Dynamic Programming
+
+> **Context:** Personal learning notes from Coursera's *Fundamentals of Reinforcement Learning* course. Chapter and section numbers (e.g. "Chapter 4", "4.1", "4.2") refer to Sutton & Barto, *Reinforcement Learning: An Introduction* (2nd ed.) — the textbook the course is based on.
+
+---
+
+## Chapter 4: Dynamic Programming
 
 DP assumes you have a **complete model**: the transition dynamics $p(s', r \mid s, a)$. The goal is to find the optimal value function $v_\*$ or policy $\pi_\*$.
 
