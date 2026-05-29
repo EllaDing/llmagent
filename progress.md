@@ -73,6 +73,7 @@ Supplementary background notes that support the courses but aren't tied to any s
 | Topic | Notes |
 |-------|-------|
 | RL Dynamic Programming (Sutton & Barto Ch. 4) + Powell's Fleet ADP | [notes](notes/rl_dynamic_programming.md) |
+| RL Temporal-Difference Learning (Sutton & Barto Ch. 6) — Sarsa, Q-learning, Expected Sarsa | [notes](notes/rl_td_learning.md) |
 
 ---
 

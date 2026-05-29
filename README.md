@@ -19,6 +19,7 @@ notes/
   f24-lecture-01.md  # Per-lecture course notes
   f24-lecture-02.md
   rl_dynamic_programming.md  # Side-learning / foundational notes
+  rl_td_learning.md
   ...
 ```
 
