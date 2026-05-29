@@ -36,7 +36,7 @@ Goal: estimate $V \approx v_\pi$ for a fixed policy $\pi$.
 
 $$V(S_t) \leftarrow V(S_t) + \alpha\bigl[\underbrace{R_{t+1} + \gamma V(S_{t+1})}_{\text{TD target}} - V(S_t)\bigr]$$
 
-Compare with **constant-$\alpha$ MC** (Eq. 6.1), which waits for the full return $G_t$:
+Compare with **constant- $\alpha$ MC** (Eq. 6.1), which waits for the full return $G_t$:
 
 $$V(S_t) \leftarrow V(S_t) + \alpha\bigl[G_t - V(S_t)\bigr]$$
 
