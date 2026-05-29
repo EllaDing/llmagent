@@ -273,7 +273,7 @@ A specialized case: value the position **after** the agent's move (e.g., the tic
 
 | Method | Target |
 |---|---|
-| Constant-$\alpha$ MC | $G_t$ |
+| Constant- $\alpha$ MC | $G_t$ |
 | TD(0) prediction | $R_{t+1} + \gamma V(S_{t+1})$ |
 | Sarsa | $R_{t+1} + \gamma Q(S_{t+1}, A_{t+1})$ |
 | Q-learning | $R_{t+1} + \gamma \max_a Q(S_{t+1}, a)$ |
