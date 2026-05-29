@@ -119,6 +119,52 @@ TD control plugs the TD update into this loop and interleaves improvement at eve
 
 ---
 
+## The Bellman View — One Equation per Method
+
+The three TD control methods are sample-based versions of three closely related Bellman equations. Knowing which equation each one samples explains the on-policy / off-policy split and ties everything back to DP (Ch. 4).
+
+### Two Bellman equations for action values
+
+**Bellman expectation equation** (for a fixed policy $\pi$):
+
+$$q_\pi(s,a) = \mathbb{E}_\pi\bigl[R_{t+1} + \gamma\, q_\pi(S_{t+1}, A_{t+1}) \mid S_t=s,\, A_t=a\bigr]$$
+
+where $A_{t+1} \sim \pi(\cdot \mid S_{t+1})$. This characterizes the value function *for whatever policy you are following*. Its DP solution method is **iterative policy evaluation** — repeatedly apply the RHS as an update.
+
+**Bellman optimality equation** (for $q_\*$):
+
+$$q_\*(s,a) = \mathbb{E}\bigl[R_{t+1} + \gamma\, \max_{a'} q_\*(S_{t+1}, a') \mid S_t=s,\, A_t=a\bigr]$$
+
+The $\max$ replaces the policy — there is no $\pi$ here. Its DP solution method is **value iteration**.
+
+### How TD methods sample these equations
+
+Both Bellman equations have the form "$q(s,a)$ = expectation of one-step return + next-state value". TD methods drop the model-based expectation over $(S_{t+1}, R_{t+1})$ and replace it with a **single sampled transition** $(S_t, A_t, R_{t+1}, S_{t+1})$. What differs is how they handle the next-state value term:
+
+| Method | Underlying Bellman equation | Next-state value term |
+|---|---|---|
+| **Sarsa** | Bellman expectation (for current $\pi$) | $Q(S_{t+1}, A_{t+1})$ — one *sampled* next action from $\pi$ |
+| **Expected Sarsa** | Bellman expectation (for current $\pi$) | $\sum_a \pi(a\|S_{t+1}) Q(S_{t+1}, a)$ — *exact* over actions |
+| **Q-learning** | Bellman optimality | $\max_a Q(S_{t+1}, a)$ — the optimal continuation |
+
+### Why this matches the on-policy / off-policy split
+
+- **Sarsa and Expected Sarsa sample the Bellman *expectation* equation**, so the value they learn is tied to whichever $\pi$ generates $A_{t+1}$. That is why they are **on-policy**: as $\pi$ changes ($\epsilon$-greedy on the latest $Q$), the equation being solved also changes. Each Sarsa update is one step of **sample-based policy evaluation** under the current policy; the surrounding GPI loop handles improvement.
+
+- **Q-learning samples the Bellman *optimality* equation.** The $\max$ is independent of the behavior policy — whichever actions the agent actually takes ($\epsilon$-greedy, fully random, replay from a log), the target $R_{t+1} + \gamma \max_a Q(S_{t+1}, a)$ is always a sample of $q_\*$'s defining equation. That is why Q-learning is **off-policy** and converges to $q_\*$ directly — it is **sample-based value iteration**.
+
+### Mapping back to DP (Ch. 4)
+
+| DP method (model-based) | TD analogue (model-free, sampled) |
+|---|---|
+| Iterative policy evaluation | Sarsa / Expected Sarsa (under current $\pi$) |
+| Value iteration | Q-learning |
+| Policy iteration (eval + greedy improve) | Sarsa + $\epsilon$-greedy GPI |
+
+The substantive change going from DP to TD is not the Bellman equation — it is how you take the expectation. DP averages over *all* successors using the model; TD averages over *sampled* successors over time. Bootstrapping is unchanged.
+
+---
+
 ## 5. Sarsa — On-Policy TD Control (§6.4)
 
 Apply TD(0) to **action values**. Uses the quintuple $(S_t, A_t, R_{t+1}, S_{t+1}, A_{t+1})$ → "Sarsa."
