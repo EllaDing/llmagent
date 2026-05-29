@@ -81,7 +81,7 @@ Loop per episode:
 
 **Soundness:** For a fixed $\pi$, TD(0) converges to $v_\pi$ — in the mean for small constant $\alpha$, and w.p. 1 under the usual stochastic-approximation step-size conditions (Eq. 2.7).
 
-**Speed:** No proof that TD beats MC in general, but empirically TD usually converges faster than constant-$\alpha$ MC on stochastic tasks (Random Walk, Example 6.2).
+**Speed:** No proof that TD beats MC in general, but empirically TD usually converges faster than constant- $\alpha$ MC on stochastic tasks (Random Walk, Example 6.2).
 
 ---
 
