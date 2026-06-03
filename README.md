@@ -20,6 +20,7 @@ notes/
   f24-lecture-02.md
   rl_dynamic_programming.md  # Side-learning / foundational notes
   rl_td_learning.md
+  rl_on_policy_prediction_with_approximation.md
   ...
 ```
 
