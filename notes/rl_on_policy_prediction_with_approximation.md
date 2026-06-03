@@ -38,7 +38,7 @@ Every update in the book can be written as a single training example $s \mapsto 
 | Monte Carlo | $S_t \mapsto G_t$ |
 | TD(0) | $S_t \mapsto R_{t+1} + \gamma\, \hat{v}(S_{t+1}, w_t)$ |
 | n-step TD | $S_t \mapsto G_{t:t+n}$ |
-| DP | $s \mapsto \mathbb{E}_\pi[R_{t+1} + \gamma\, \hat{v}(S_{t+1}, w_t) \mid S_t = s]$  (arbitrary $s$, not experienced) |
+| DP | $s \mapsto \mathbb{E}_\pi[R_{t+1} + \gamma\, \hat{v}(S_{t+1}, w_t) \| S_t = s]$  (arbitrary $s$, not experienced) |
 
 Each $s \mapsto u$ is fed to a **supervised-learning / function-approximation** method as an input→output example; the function it produces *is* the estimated value function.
 
