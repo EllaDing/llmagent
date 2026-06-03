@@ -242,11 +242,11 @@ $\hat{v} = w^\top x(s)$ cannot capture that "feature $i$ is good only in the abs
 
 ### 9.5.1 Polynomials
 - State as numbers $s = (s_1, \ldots, s_k)$; features like $(1, s_1, s_2, s_1 s_2, \ldots)$. The $1$ → affine functions; products like $s_1 s_2$ → interactions.
-- **Order-$n$ polynomial basis** (9.17): $x_i(s) = \prod_j s_j^{c_{ij}}$, exponents in $\{0, \ldots, n\}$ → $(n+1)^k$ features.
+- **Order- $n$ polynomial basis** (9.17): $x_i(s) = \prod_j s_j^{c_{ij}}$, exponents in $\{0, \ldots, n\}$ → $(n+1)^k$ features.
 - Grows exponentially in $k$ → must subset. **Not recommended for online RL** (loses to Fourier, Fig. 9.5).
 
 ### 9.5.2 Fourier Basis
-- Order-$n$ **Fourier cosine basis**. 1-D: $x_i(s) = \cos(i \pi s)$, $s \in [0, 1]$.
+- Order- $n$ **Fourier cosine basis**. 1-D: $x_i(s) = \cos(i \pi s)$, $s \in [0, 1]$.
 - $k$-D (9.18): $x_i(s) = \cos(\pi\, s^\top c^i)$, integer vector $c^i \in \{0, \ldots, n\}^k$ sets **frequency per dimension**; a 0 entry = constant along that dim; two nonzero entries = an **interaction** (ratio = direction). → $(n+1)^k$ features.
 - Suggested per-feature step size $\alpha_i = \alpha / \lVert c^i \rVert$.
 - **Pros:** often beats polynomials/RBFs; easy priors (pick $c^i$ for suspected interactions; cap frequency to filter noise).
