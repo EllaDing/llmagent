@@ -21,6 +21,7 @@ notes/
   rl_dynamic_programming.md  # Side-learning / foundational notes
   rl_td_learning.md
   rl_on_policy_prediction_with_approximation.md
+  rl_on_policy_control_with_approximation_notes.md
   ...
 ```
 
