@@ -76,6 +76,7 @@ Supplementary background notes that support the courses but aren't tied to any s
 | RL Temporal-Difference Learning (Sutton & Barto Ch. 6) — Sarsa, Q-learning, Expected Sarsa | [notes](notes/rl_td_learning.md) |
 | RL On-Policy Prediction with Approximation (Sutton & Barto Ch. 9) — VE, semi-gradient TD, linear FA, tile coding | [notes](notes/rl_on_policy_prediction_with_approximation.md) |
 | RL On-Policy Control with Approximation (Sutton & Barto Ch. 10) — semi-gradient Sarsa, average reward, differential values | [notes](notes/rl_on_policy_control_with_approximation_notes.md) |
+| RL Policy Gradient Methods (Sutton & Barto Ch. 13) — policy gradient theorem, REINFORCE, baselines, actor–critic | [notes](notes/chapter13_policy_gradient_methods_notes.md) |
 
 ---
 
