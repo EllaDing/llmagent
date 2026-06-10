@@ -22,7 +22,7 @@ notes/
   rl_td_learning.md
   rl_on_policy_prediction_with_approximation.md
   rl_on_policy_control_with_approximation_notes.md
-  chapter13_policy_gradient_methods_notes.md
+  rl_policy_gradient_methods.md
   ...
 ```
 
