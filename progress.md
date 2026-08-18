@@ -4,20 +4,22 @@
 **URL:** https://agenticai-learning.org/f24
 **Instructors:** Dawn Song, Xinyun Chen
 
-| # | Topic | Status | Notes |
-|---|-------|--------|-------|
-| 1 | Foundation of LLMs and Reasoning | [x] | [notes](notes/f24-lecture-01.md) |
-| 2 | Planning and Tool Utilization | [x] | [notes](notes/f24-lecture-02.md) |
-| 3 | LLM Agent Infrastructure | [ ] | |
-| 4 | Retrieval-Augmented Generation | [ ] | |
-| 5 | Code Generation and Data Science | [ ] | |
-| 6 | Multimodal Agents and Robotics | [ ] | |
-| 7 | Evaluation and Benchmarking | [ ] | |
-| 8 | Privacy, Safety, and Ethics | [ ] | |
-| 9 | Human-Agent Interaction and Alignment | [ ] | |
-| 10 | Multi-Agent Collaboration | [ ] | |
+| # | Date | Lecture | Speaker | Status | Notes |
+|---|------|---------|---------|--------|-------|
+| 1 | Sep 9 | LLM Reasoning | Denny Zhou (Google DeepMind) | [x] | [notes](notes/f24-lecture-01.md) |
+| 2 | Sep 16 | LLM Agents: Brief History & Overview | Shunyu Yao (OpenAI) | [x] | [notes](notes/f24-lecture-02.md) |
+| 3 | Sep 23 | Agentic AI Frameworks & AutoGen · Building a Multimodal Knowledge Assistant | Chi Wang (AutoGen-AI) · Jerry Liu (LlamaIndex) | [x] | [notes](notes/f24-lecture-03.md) |
+| 4 | Sep 30 | Enterprise Trends for Generative AI | Burak Gokturk (Google) | [ ] | |
+| 5 | Oct 7 | Compound AI Systems & DSPy Framework | Omar Khattab (Databricks) | [ ] | |
+| 6 | Oct 14 | Agents for Software Development | Graham Neubig (CMU) | [ ] | |
+| 7 | Oct 21 | AI Agents for Enterprise Workflows | Nicolas Chapados (ServiceNow) | [ ] | |
+| 8 | Oct 28 | Neural & Symbolic Decision Making | Yuandong Tian (Meta AI) | [ ] | |
+| 9 | Nov 4 | Project GR00T: Generalist Robotics Blueprint | Jim Fan (NVIDIA) | [ ] | |
+| 10 | Nov 18 | Open-Source & Science in Foundation Models | Percy Liang (Stanford) | [ ] | |
+| 11 | Nov 25 | Measuring Agent Capabilities & Anthropic's RSP | Ben Mann (Anthropic) | [ ] | |
+| 12 | Dec 2 | Safe, Trustworthy AI Agents & Policy | Dawn Song (UC Berkeley) | [ ] | |
 
-**Guest highlights:** Denny Zhou (Google DeepMind), Shunyu Yao (OpenAI), Chi Wang (AutoGen-AI), Jerry Liu (LlamaIndex), Percy Liang (Stanford), Ben Mann (Anthropic)
+*Titles and speakers match the official schedule — paraphrased labels caused a mismatch when locating lecture videos.*
 
 ---
 
