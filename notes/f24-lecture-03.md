@@ -10,7 +10,9 @@
 1. What will future AI applications look like?
 2. How do we empower every developer to build them?
 
-**The bet:** future AI applications are *agentic*. Backed by [The Shift from Models to Compound AI Systems](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/) — best results come from multiple interacting components (models, retrievers, tools), not monolithic models. AlphaCode 2 generates ~1M candidates then filters.
+**The bet (made early 2023):** future AI applications are *agentic* — agents as a new way for humans to interact with the digital world. Many doubted agentic AI was viable at the time; Chi Wang cites [the Berkeley compound AI systems article](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/) in passing as later corroboration, not as a framework he builds on. *(Compound AI systems get their real treatment in Lecture 5, Omar Khattab.)*
+
+**What's newly possible:** old agentic applications (assistants, bots, game agents) are far easier and more capable to build; genuinely new ones appear — science discovery agents, web automation, software agents building from scratch. Demo: a multi-agent system builds a working website, then self-heals after a critical line is deleted.
 
 **Three benefits of agentic AI:** natural-language interface · complex tasks with minimal supervision · **a software architecture** — the under-discussed one.
 
