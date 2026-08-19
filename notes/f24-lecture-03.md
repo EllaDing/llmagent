@@ -10,7 +10,7 @@
 1. What will future AI applications look like?
 2. How do we empower every developer to build them?
 
-**The bet (made early 2023):** future AI applications are *agentic* — agents as a new way for humans to interact with the digital world. Many doubted agentic AI was viable at the time; Chi Wang cites [the Berkeley compound AI systems article](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/) in passing as later corroboration, not as a framework he builds on. *(Compound AI systems get their real treatment in Lecture 5, Omar Khattab.)*
+**The bet (made early 2023):** future AI applications are *agentic* — agents as a new way for humans to interact with the digital world. Many doubted agentic AI was viable at the time; Chi Wang cites [the Berkeley compound AI systems article](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/).
 
 **What's newly possible:** old agentic applications (assistants, bots, game agents) are far easier and more capable to build; genuinely new ones appear — science discovery agents, web automation, software agents building from scratch. Demo: a multi-agent system builds a working website, then self-heals after a critical line is deleted.
 
@@ -82,5 +82,3 @@ This lecture is about *infrastructure*, the fastest-moving layer. The framing ag
 | Agents as microservices behind a custom message layer | Right instinct, hand-rolled. **MCP** (Nov 2024) standardized the tool half; **A2A** (Apr 2025) the agent-to-agent half. |
 
 **The real gap — Agent Skills.** Neither speaker has a concept of portable, model-readable capability packaging; both assume capability = Python wired up inside their framework. Skills invert it: a folder of Markdown + scripts loaded on demand. That kills AutoBuild and the tool ceiling — but *vindicates* the modularity thesis. The module boundary just moved from "a Python class in your framework" to "a folder on disk / an MCP server," which survives model swaps and requires no one to adopt your framework.
-
-**How to watch:** Chi Wang's first ~15 min (framing, design axes) and Jerry Liu's parsing / constrained-vs-unconstrained / workflows sections. Skip the AutoGen API mechanics and the RAG pipeline construction. Patch with MCP and Agent Skills.

@@ -27,22 +27,22 @@
 **URL:** https://llmagents-learning.org/sp25
 **Instructors:** Dawn Song, Xinyun Chen, Kaiyu Yang
 
-| # | Topic | Status | Notes |
-|---|-------|--------|-------|
-| 1 | Inference-Time Techniques for LLM Reasoning | [ ] | |
-| 2 | Learning to Reason with LLMs | [ ] | |
-| 3 | Reasoning, Memory, and Planning of Language Agents | [ ] | |
-| 4 | Open Training Recipes for Reasoning | [ ] | |
-| 5 | Coding Agents and Vulnerability Detection | [ ] | |
-| 6 | Multimodal Autonomous AI Agents | [ ] | |
-| 7 | Multimodal Agents: Perception to Action | [ ] | |
-| 8 | AlphaProof and Formal Mathematics | [ ] | |
-| 9 | Autoformalization and Theorem Proving | [ ] | |
-| 10 | Bridging Informal and Formal Mathematical Reasoning | [ ] | |
-| 11 | Abstraction and Discovery with LLM Agents | [ ] | |
-| 12 | Safe and Secure Agentic AI | [ ] | |
+| # | Date | Lecture | Speaker | Status | Notes |
+|---|------|---------|---------|--------|-------|
+| 1 | Jan 27 | Inference-Time Techniques for LLM Reasoning | Xinyun Chen (Google DeepMind) | [ ] | |
+| 2 | Feb 3 | Learning to Reason with LLMs | Jason Weston (Meta) | [ ] | |
+| 3 | Feb 10 | On Reasoning, Memory, and Planning of Language Agents | Yu Su (Ohio State) | [ ] | |
+| 4 | Feb 24 | Open Training Recipes for Reasoning in Language Models | Hanna Hajishirzi (UW) | [ ] | |
+| 5 | Mar 3 | Coding Agents and AI for Vulnerability Detection | Charles Sutton (Google DeepMind) | [ ] | |
+| 6 | Mar 10 | Multimodal Autonomous AI Agents | Ruslan Salakhutdinov (CMU/Meta) | [ ] | |
+| 7 | Mar 17 | Multimodal Agents — From Perception to Action | Caiming Xiong (Salesforce AI) | [ ] | |
+| 8 | Mar 31 | AlphaProof: When RL Meets Formal Mathematics | Thomas Hubert (Google DeepMind) | [ ] | |
+| 9 | Apr 7 | Language Models for Autoformalization and Theorem Proving | Kaiyu Yang (Meta FAIR) | [ ] | |
+| 10 | Apr 14 | Bridging Informal and Formal Mathematical Reasoning | Sean Welleck (CMU) | [ ] | |
+| 11 | Apr 21 | Abstraction and Discovery with LLM Agents | Swarat Chaudhuri (UT Austin) | [ ] | |
+| 12 | Apr 28 | Towards Building Safe and Secure Agentic AI | Dawn Song (UC Berkeley) | [ ] | |
 
-**Guest highlights:** Jason Weston (Meta), Hanna Hajishirzi (UW), Ruslan Salakhutdinov (CMU/Meta), Thomas Hubert (Google DeepMind)
+*Feb 17 (Presidents' Day) and Mar 24 (Spring Recess) had no class.*
 
 ---
 
