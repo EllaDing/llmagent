@@ -195,10 +195,10 @@ Sorting the lecture along the first axis:
 | Self-consistency, ToT | Search | Self-consistency survived; ToT relocated into training-trace generation |
 | RLVR (came after the lecture) | Learning | Became the dominant approach |
 
-Two observations that complicate a clean sort:
+Two things complicate a clean sort:
 
-- Being search-flavored didn't keep ToT at inference time. The *scaffold* was hand-built even though the *principle* was search — and long-CoT models learned to backtrack without it.
-- RLVR looks like pure learning, but it only applies where verification is free, and which domains those are is a human choice. The reward function is where the remaining human input sits, and it's where reward hacking shows up (see the PRM findings above).
+- ToT was search, but the *scaffold* was still hand-built — models learned to backtrack without it.
+- RLVR looks like pure learning, but the human input moved into the reward function rather than disappearing.
 
 On the second, epistemological axis: least-to-most encodes Pólya's heuristics, which are themselves human discoveries *about how problem-solving works*. SELF-DISCOVER moves up a level — supplying a menu of 39 modules rather than one fixed method — but the inventory is still human-curated. Neither is what Sutton means by an agent that discovers.
 
