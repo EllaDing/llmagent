@@ -29,7 +29,7 @@
 
 | # | Date | Lecture | Speaker | Status | Notes |
 |---|------|---------|---------|--------|-------|
-| 1 | Jan 27 | Inference-Time Techniques for LLM Reasoning | Xinyun Chen (Google DeepMind) | [ ] | |
+| 1 | Jan 27 | Inference-Time Techniques for LLM Reasoning | Xinyun Chen (Google DeepMind) | [x] | [notes](notes/sp25-lecture-01.md) |
 | 2 | Feb 3 | Learning to Reason with LLMs | Jason Weston (Meta) | [ ] | |
 | 3 | Feb 10 | On Reasoning, Memory, and Planning of Language Agents | Yu Su (Ohio State) | [ ] | |
 | 4 | Feb 24 | Open Training Recipes for Reasoning in Language Models | Hanna Hajishirzi (UW) | [ ] | |
