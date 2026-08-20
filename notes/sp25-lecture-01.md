@@ -178,17 +178,31 @@ Recorded a week after DeepSeek-R1 — right at the hinge between hand-built infe
 | o1 / R1 / Kimi k1.5 as frontier | Several generations back. |
 
 ### Reading the lecture through its own closing slide
-Sutton names exactly two things that scale with computation: **search** and **learning**. Sort the lecture by that and the survival pattern is almost too neat:
 
-- **Part 1** (least-to-most, SELF-DISCOVER, analogical prompting) is *building in our discoveries* — human-designed reasoning structure. Sutton says these lose. They did, within a year.
-- **Part 2** (self-consistency, ToT) is **search**. Sanctioned — and self-consistency survived.
-- **RLVR**, which came next, is **learning**. Survived hardest.
+> *"The biggest lesson that can be read from 70 years of AI research is that general methods that leverage computation are ultimately the most effective, and by a large margin. … We want AI agents that can discover like we can, not which contain what we have discovered. Building in our discoveries only makes it harder to see how the discovering process can be done."*
+> — Rich Sutton, [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) (2019)
 
-Where it gets interesting is that being search-flavored didn't save ToT either — it moved into training-trace generation. The scaffold was still hand-built even though the principle was search. **The Bitter Lesson applies recursively: hand-built search loses to learned search.**
+Two things worth separating in that passage:
 
-One counterweight: Sutton is describing decades of AI research, and the essay gets misread as "never engineer anything." Part 1's techniques were the right thing to build in 2023 and paid off for two years. The Bitter Lesson is a bet about **half-life**, not about being wrong.
+- **The scaling claim** — the two methods that scale arbitrarily with computation are **search** and **learning**.
+- **The epistemological claim** — building in a discovery obscures *the discovering process itself*. This is a statement about research method, not only about which system wins a benchmark.
 
-That tension is live for anything built today. An Agent Skill is, by Sutton's standard, straightforwardly *building in our discoveries* — and so is context engineering. Best treated as scaffolding with an expiry date rather than permanent architecture, which is what this lecture demonstrates in miniature.
+Sorting the lecture along the first axis:
+
+| Technique | Category | Where it ended up |
+|---|---|---|
+| Least-to-most, SELF-DISCOVER, analogical prompting | Built-in structure | Absorbed by post-training |
+| Self-consistency, ToT | Search | Self-consistency survived; ToT relocated into training-trace generation |
+| RLVR (came after the lecture) | Learning | Became the dominant approach |
+
+Two observations that complicate a clean sort:
+
+- Being search-flavored didn't keep ToT at inference time. The *scaffold* was hand-built even though the *principle* was search — and long-CoT models learned to backtrack without it.
+- RLVR looks like pure learning, but it only applies where verification is free, and which domains those are is a human choice. The reward function is where the remaining human input sits, and it's where reward hacking shows up (see the PRM findings above).
+
+On the second, epistemological axis: least-to-most encodes Pólya's heuristics, which are themselves human discoveries *about how problem-solving works*. SELF-DISCOVER moves up a level — supplying a menu of 39 modules rather than one fixed method — but the inventory is still human-curated. Neither is what Sutton means by an agent that discovers.
+
+**One distinction this suggests for evaluating any technique:** does it encode an answer, or define what counts as a good answer? A prompt scaffold does the former. A verifier or eval does the latter — it specifies success without prescribing method. That maps onto the lecture's own finding that verification, not generation, is the binding constraint.
 
 ### Verdict
 **Part 1 is history. Part 2 is half-absorbed, half-relocated into training. Part 3 aged best** — because it's the negative result, and the constraint it found (models can't verify themselves) is still binding in 2026.
